@@ -6,4 +6,43 @@ html {
 body{
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: lightcyan;
+  /* position: fixed; */
+}
+nav ul{
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+}
+nav ul li {
+  list-style-type: none;
+}
+nav a{
+  text-decoration: none;
+}
+nav a:hover{
+  color: red;
+}
+
+.intro{
+  text-align: center;
+  margin-top: 100px;
+}
+.intro img{
+  width: 300px;
+  height: auto;
+}
+.intro h1{
+  font-size: 40px;
+}
+.intro h2{
+  font-size: 30px;
+  color: gray;
 }
