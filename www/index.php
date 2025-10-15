@@ -50,31 +50,24 @@ $educations = mysqli_fetch_all($result, MYSQLI_ASSOC);
         <!-- END OF ABOUT ME -->
 
         <!-- BEGIN OF EDUCATION -->
-        <section id="education">
+        <section id="education" class="education">
             <h2>Education</h2>
+            <?php foreach($educations as $education ): ?>
             <table>
-                <caption>Educational background</caption>
                 <tr>
-                    <th scope="col">Year</th>
                     <th scope="col">Institution</th>
                     <th scope="col">Degree</th>
+                    <th scope="col">Year</th>
+                    <th scope="col">More Information</th>
                 </tr>
                 <tr>
-                    <td>2023 - Present</td>
-                    <td>Nova College, Haarlem</td>
-                    <td>Software Developer (MBO-4)</td>
-                </tr>
-                <tr>
-                    <td>2017 - 2019</td>
-                    <td>ROC van Amsterdam, Amsterdam</td>
-                    <td>Cook (MBO-3)</td>
-                </tr>
-                <tr>
-                    <td>2011 - 2017</td>
-                    <td>Montessori Lyceum, Amsterdam</td>
-                    <td>High School Diploma (HAVO)</td>
+                    <td><?php echo $education['school_name']; ?></td>
+                    <td><?php echo $education['difficulty']; ?></td>
+                    <td><?php echo $education['start_year']; ?> - <?php echo $education['end_year'] ?></td>
+                    <td><a href="education-details.php?id=<?php echo $education['id'] ?>">More Information</a></td>
                 </tr>
             </table>
+            <?php endforeach; ?>
         </section>
 
         <!-- END OF EDUCATION -->

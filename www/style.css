@@ -1,36 +1,67 @@
 html {
   scroll-behavior: smooth;
 }
+h1, h2, h3 {
+  color: #E8EAF0;
+}
+p {
+  color: #B0B7C3;
+  line-height: 1.7;
+}
 
 
 body{
+    background-color: #2C3645;
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-
-nav{
+/* NAVBAR */
+nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Spread nav sections and socials */
+  align-items: center;            /* Vertically center items */
   text-align: center;
-  background-color: lightcyan;
-  /* position: fixed; */
+  background-color: #2C3645;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-nav ul{
+
+nav ul {
   display: flex;
   gap: 20px;
   padding: 10px;
+  margin: 0 auto;                /* Center horizontally */
+  flex: 1;                       /* Take available space */
+  justify-content: center;       /* Center nav items */
 }
+
 nav ul li {
   list-style-type: none;
 }
 nav a{
   text-decoration: none;
+  color: #E8EAF0;
 }
 nav a:hover{
-  color: red;
+  color: #fd700f;
 }
 
+
+.socials {
+  display: flex;
+  gap: 10px;
+  padding-right: 20px;
+  margin-left: 0;                /* Remove auto margin */
+}
+.socials img{
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+}
+
+/* END OF NAVBAR */
+
+/* INDEX PAGE */
 .intro{
   text-align: center;
   margin-top: 100px;
@@ -44,5 +75,108 @@ nav a:hover{
 }
 .intro h2{
   font-size: 30px;
-  color: gray;
 }
+
+/* END OF INDEX PAGE */
+
+
+
+/* ABOUT PAGE */
+
+
+
+/* END OF ABOUT PAGE */
+
+/* EDUCATION PAGE */
+
+.education table {
+  width: 90%;
+  margin: 40px auto;
+  border-collapse: collapse;
+  background-color: #242D3A;
+  color: #E8EAF0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+.education th, td {
+  padding: 15px 20px;
+  text-align: left;
+}
+
+.education th {
+  background-color: #2C3645;
+  color: #fd700f;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.education tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.education tr:nth-child(even) {
+  background-color: #2C3645;
+}
+
+.education tr:hover {
+  background-color: #3A4658;
+  transition: background-color 0.3s ease;
+}
+
+.education caption {
+  caption-side: top;
+  color: #B0B7C3;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.education a {
+  color: #fd700f;
+  text-decoration: none;
+}
+.education a:hover {
+  text-decoration: underline;
+}
+
+.education h2 {
+  text-align: center;
+  color: #fd700f;
+  margin-top: 50px;
+  font-size: 36px;
+}
+
+
+/* END OF EDUCATION */
+
+
+/* SKILLS PAGE */
+
+
+/* END OF SKILLS */
+
+/* CONTACT PAGE */
+
+
+
+/* END OF CONTACT PAGE */
+
+
+/* FOOTER */
+footer {
+  background-color: #242D3A;
+  color: #B0B7C3;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p{
+  margin: 0;
+}
+
+/* END OF FOOTER */
