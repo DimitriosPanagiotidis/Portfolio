@@ -27,12 +27,15 @@ $educations = mysqli_fetch_all($result, MYSQLI_ASSOC);
             <!-- NAVBAR -->
             <h1>Dimitrios Panagiotidis</h1>
             <?php include 'navbar.php' ?>
-            <!-- END OF NAVBAR -->
+            
         </header>
+        <!-- LEFT SIDE BAR -->
         <div class="content">
             <aside class="sidebar-left">
+                <h1>Dimitris Panagiotidis</h1>
                 <img src="./images/Dimitris_cartoon.png" alt="Dimitris Panagiotidis">
             </aside>
+            
             <main class="intro">
                 <!-- BEGIN OF ABOUT ME  -->
                 <section id="about" class="about">
@@ -48,7 +51,7 @@ $educations = mysqli_fetch_all($result, MYSQLI_ASSOC);
                         </ul>
                     </article>
                 </section>
-                <!-- END OF ABOUT ME -->
+                
 
                 <!-- BEGIN OF EDUCATION -->
                 <section id="education" class="education">
@@ -71,9 +74,9 @@ $educations = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     <?php endforeach; ?>
                 </section>
             </main>
-
+                    <!--RIGHT SIDEBAR  -->
             <aside class="sidebar-right">
-                <p>1231231414141414141</p>
+                <p>TEST</p>
             </aside>
         </div>
         <footer>
