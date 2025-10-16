@@ -33,8 +33,14 @@ $educations = mysqli_fetch_all($result, MYSQLI_ASSOC);
             <aside class="sidebar-left">
                 <h1>Dimitris Panagiotidis</h1>
                 <img src="./images/Dimitris_cartoon.png" alt="Dimitris Panagiotidis">
-            </aside>
-            
+                <h2>Software Developer</h2>
+                <h3>In Progress</h3>
+                <h3>at Nova College</h3>
+                <h3>Haarlem</h3>
+                <h3>The Netherlands</h3>
+                <h3>Contact: dimitris@example.com</h3>
+                <h3>Social Media:</h3>
+                </aside>
             <main class="intro">
                 <!-- BEGIN OF ABOUT ME  -->
                 <section id="about" class="about">
@@ -55,22 +61,26 @@ $educations = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 <!-- BEGIN OF EDUCATION -->
                 <section id="education" class="education">
                     <h2>Education</h2>
-                    <?php foreach ($educations as $education): ?>
-                        <table>
+                    <table>
+                        <thead>
                             <tr>
                                 <th scope="col">Institution</th>
                                 <th scope="col">Degree</th>
                                 <th scope="col">Year</th>
                                 <th scope="col">More Information</th>
                             </tr>
-                            <tr>
-                                <td><?php echo $education['school_name']; ?></td>
-                                <td><?php echo $education['difficulty']; ?></td>
-                                <td><?php echo $education['start_year']; ?> - <?php echo $education['end_year'] ?></td>
-                                <td><a href="education-details.php?id=<?php echo $education['id'] ?>">More Information</a></td>
-                            </tr>
-                        </table>
-                    <?php endforeach; ?>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($educations as $education): ?>
+                                <tr>
+                                    <td><?php echo $education['school_name']; ?></td>
+                                    <td><?php echo $education['difficulty']; ?></td>
+                                    <td><?php echo $education['start_year']; ?> - <?php echo $education['end_year'] ?></td>
+                                    <td><a href="education-details.php?id=<?php echo $education['id'] ?>">More Information</a></td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
                 </section>
             </main>
                     <!--RIGHT SIDEBAR  -->

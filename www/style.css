@@ -103,6 +103,13 @@ header.header h1 {
   color: #fd700f;
   margin-top: 15px;
 }
+.sidebar-left h2,
+h3 {
+  text-align: center;
+  color: #fd700f;
+  margin-top: 10px;
+}
+
 .sidebar-left img {
   width: 400px;
   height: auto;
@@ -160,9 +167,9 @@ header.header h1 {
 }
 
 .education th,
-td {
+.education td {
   padding: 15px 20px;
-  text-align: left;
+  text-align: center;
 }
 
 .education th {
@@ -171,19 +178,22 @@ td {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
-  justify-content: space-between;
-  text-align: left;
+  text-align: center;
 }
 
-.education tr {
+.education tbody tr {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.education tr:nth-child(even) {
+.education tbody tr:nth-child(even) {
   background-color: #2c3645;
 }
 
-.education tr:hover {
+.education tbody tr:nth-child(odd) {
+  background-color: #242d3a;
+}
+
+.education tbody tr:hover {
   background-color: #3a4658;
   transition: background-color 0.3s ease;
 }
