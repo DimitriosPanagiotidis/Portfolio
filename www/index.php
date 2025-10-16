@@ -25,7 +25,6 @@ $educations = mysqli_fetch_all($result, MYSQLI_ASSOC);
     <div class="container">
         <header id="home" class="header">
             <!-- NAVBAR -->
-            <h1>Dimitrios Panagiotidis</h1>
             <?php include 'navbar.php' ?>
             
         </header>
