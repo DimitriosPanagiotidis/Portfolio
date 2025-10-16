@@ -16,12 +16,26 @@ body{
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.container{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.content{
+  display: flex;
+  flex: 1;
+  padding: 20px;
+  background: white;
+}
+
 /* NAVBAR */
 nav {
   display: flex;
   justify-content: space-between; /* Spread nav sections and socials */
   align-items: center;            /* Vertically center items */
   text-align: center;
+  padding: 25px;
   background-color: #2C3645;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -29,7 +43,7 @@ nav {
 nav ul {
   display: flex;
   gap: 20px;
-  padding: 10px;
+  padding: 20px;
   margin: 0 auto;                /* Center horizontally */
   flex: 1;                       /* Take available space */
   justify-content: center;       /* Center nav items */
@@ -41,11 +55,22 @@ nav ul li {
 nav a{
   text-decoration: none;
   color: #E8EAF0;
+  transition: background 0.3s;
 }
 nav a:hover{
   color: #fd700f;
 }
 
+header.header {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+}
+header.header h1{
+  font-weight: 800;
+  margin-left: 15px;
+  margin-top: 10px;
+}
 
 .socials {
   display: flex;
@@ -62,7 +87,19 @@ nav a:hover{
 /* END OF NAVBAR */
 
 /* INDEX PAGE */
+.sidebar-left,
+.sidebar-right{
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 250px;
+  background: #ecf0f1;
+  padding: 20px;
+}
+
 .intro{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   text-align: center;
   margin-top: 100px;
 }
@@ -82,7 +119,17 @@ nav a:hover{
 
 
 /* ABOUT PAGE */
+.about article h2{
+    color: #fd700f;
+}
+.about article p{
+  color: black;
+  font-weight: 600;
+}
 
+.about li{
+  list-style-type: none;
+}
 
 
 /* END OF ABOUT PAGE */
@@ -168,15 +215,12 @@ nav a:hover{
 
 
 /* FOOTER */
-footer {
+footer.footer {
   background-color: #242D3A;
   color: #B0B7C3;
   text-align: center;
   padding: 20px;
-}
-
-footer p{
-  margin: 0;
+  height: 80px;
 }
 
 /* END OF FOOTER */
