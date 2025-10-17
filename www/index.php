@@ -2,7 +2,7 @@
 
 require 'database.php';
 
-$sql = "SELECT * FROM educations";
+$sql = "SELECT * FROM educations ORDER BY start_year DESC";
 $result = mysqli_query($conn, $sql);
 $educations = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
@@ -12,15 +12,13 @@ $educations = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dimitris Panagiotidis</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <div class="container">
         <header id="home" class="header">
@@ -31,16 +29,18 @@ $educations = mysqli_fetch_all($result, MYSQLI_ASSOC);
         <!-- LEFT SIDE BAR -->
         <div class="content">
             <aside class="sidebar-left">
+                <ul class="socials">
+                    <li><a href="https://github.com/DimitriosPanagiotidis" target="_blank"><img src="./images/Github.png" alt="Github_Logo"></a></li>
+                    <li><a href="https://www.linkedin.com/in/dimitris-rafail-panagiotidis-7874b8277" target="_blank"><img src="./images/Linkedin.png" alt="Linkedin_Logo"></a></li>
+                </ul>
                 <h1>Dimitris Panagiotidis</h1>
                 <img src="./images/Dimitris_cartoon.png" alt="Dimitris Panagiotidis">
-                <h2>Software Developer</h2>
-                <h3>In Progress</h3>
+                <h2>Software Developer, in progress</h2>
                 <h3>at Nova College</h3>
                 <h3>Haarlem</h3>
                 <h3>The Netherlands</h3>
-                <h3>Contact: dimitris@example.com</h3>
-                <h3>Social Media:</h3>
-                </aside>
+                <h3>Contact: dimitrispanagiotidis2003@gmail.com</h3>
+            </aside>
             <main class="intro">
                 <!-- BEGIN OF ABOUT ME  -->
                 <section id="about" class="about">
@@ -54,6 +54,7 @@ $educations = mysqli_fetch_all($result, MYSQLI_ASSOC);
                             <li>I am self-taught in building computers — in my spare time, I am usually around technology.</li>
                             <li>Dutch | English | Greek</li>
                         </ul>
+
                     </article>
                 </section>
                 
